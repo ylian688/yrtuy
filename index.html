@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻资讯网页</title>
+    <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 标题样式 */
+        h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* 水平线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+
+        /* 新闻资讯部分整体样式 */
+       .news-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* 左侧新闻列表样式 */
+       .left-news {
+            width: 100%;
+            max-width: calc(50% - 10px);
+        }
+
+        /* 单条左侧新闻样式 */
+       .left-news-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* 左侧新闻图片容器样式 */
+       .left-news-images {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* 新闻图片样式 */
+       .news-img {
+            width: 50%;
+            height: auto;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* 作者栏样式 */
+       .author {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 右侧热点新闻推荐样式 */
+       .right-hot-news {
+            width: 100%;
+            max-width: calc(50% - 10px);
+        }
+
+        /* 单条右侧热点新闻样式 */
+       .right-hot-news-item {
+            margin-bottom: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        /* 热点新闻链接样式 */
+       .right-hot-news-item a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        /* 热点新闻图片样式 */
+       .right-hot-news-item img {
+            width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+           .left-news,
+           .right-hot-news {
+                max-width: 100%;
+            }
+           .left-news-images {
+                flex-direction: column;
+            }
+           .news-img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>频道 <span>科技</span> > 太空探测</h4>
+        <hr>
+        <div class="news-section">
+            <!-- 左侧新闻资讯部分 -->
+            <div class="left-news">
+                <div class="left-news-item">
+                    <h4>飞行了200多亿公里的旅行者1号，为何不会撞上太空中的小行星</h4>
+                    <div class="left-news-images">
+                        <img src="3.png" alt="新闻图片1" class="news-img">
+                        <img src="4.png" alt="新闻图片2" class="news-img">
+                    </div>
+                    <p class="author">资黎新闻 1月前+关注</p>
+                </div>
+                <div class="left-news-item">
+                    <h4>欧洲探测器从44亿公里外传回多幅照片</h4>
+                    <div class="left-news-images">
+                        <img src="5.png" alt="新闻图片1" class="news-img">
+                        <img src="6.png" alt="新闻图片2" class="news-img">
+                    </div>
+                    <p class="author">涵端社会 2年前+关注</p>
+                </div>
+                <div class="left-news-item">
+                    <h4>为什么太空没有氧气，陨石却能够燃烧</h4>
+                    <div class="left-news-images">
+                        <img src="8.png" alt="新闻图片1" class="news-img">
+                        <img src="7.png" alt="新闻图片2" class="news-img">
+                    </div>
+                    <p class="author">春日平记 3年前 +关注</p>
+                </div>
+            </div>
+            <!-- 右侧热点新闻推荐部分 -->
+            <div class="right-hot-news">
+                <h4>热点文章推荐</h4>
+                <div class="right-hot-news-item">
+                    <a href="#">研究表明：人类的自然寿命为120岁</a>
+                    <img src="10.png" alt="热点新闻图片1">
+                </div>
+                <div class="right-hot-news-item">
+                    <a href="#">忙碌了一下午时间，一个窍门，搞定一切，立马干净如新</a>
+                    <img src="11.png" alt="热点新闻图片2">
+                </div>
+                <div class="right-hot-news-item">
+                    <a href="#">俗语“九月十二雨一宝，四季无虫害”，一宝指的是啥</a>
+                    <img src="9.png" alt="热点新闻图片3">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>    
